@@ -12,4 +12,4 @@ st.title('Login Expirations')
 with st.container():
     st.header('SIPR')
     
-    sipr_date = st.date_input()
+    sipr_date = st.date_input(label='Enter Last Login')
