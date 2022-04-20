@@ -22,27 +22,27 @@ with st.container():
      st.header('SIPR')
      
      if not sipr_date:
-          sipr_button = st.button("Enter New Login Date")
+          sipr_button = st.button("Enter New Login Date", key=1)
 
           if sipr_button:
-               sipr_date = st.date_input(label="Enter Last Login", value=None, key=1)
+               sipr_date = st.date_input(label="Enter Last Login", value=None, key=2)
 
                if sipr_date:
                     Heger.put({"SIPR": str(sipr_date), "key": "1"})
      if sipr_date:
           st.write("Last Login: " + str(sipr_date["SIPR"]))
 
-          new_sipr_button = st.button("Enter a New Login Date")
+          new_sipr_button = st.button("Enter a New Login Date", key=3)
 
 
 
      st.header('CNET')
     
      if not cnet_date:
-          cnet_button = st.button("Enter New Login Date")
+          cnet_button = st.button("Enter New Login Date", key=4)
 
           if cnet_button:
-               cnet_date = st.date_input(label='Enter Last Login', value=None, key=2)
+               cnet_date = st.date_input(label='Enter Last Login', value=None, key=5)
 
                if cnet_date:
                     Heger.put({"CNET": str(cnet_date), "key": "2"})
@@ -50,4 +50,4 @@ with st.container():
      if cnet_date:
           st.write("Last Login: " + str(cnet_date["CNET"]))
 
-          new_cnet_button = st.button("Enter a New Login Date")
+          new_cnet_button = st.button("Enter a New Login Date", key=6)
