@@ -32,6 +32,8 @@ with st.container():
      if sipr_date:
           st.write("Last Login: " + str(sipr_date["SIPR"]))
 
+          new_sipr_button = st.button(label="Enter a New Login Date", value=None, key=3)
+
 
 
      st.header('CNET')
@@ -48,3 +50,4 @@ with st.container():
      if cnet_date:
           st.write("Last Login: " + str(cnet_date["CNET"]))
 
+          new_cnet_button = st.button(label="Enter a New Login Date", value=None, key=4)
