@@ -1,4 +1,5 @@
 import streamlit as st
+from deta import Deta
 
 st.set_page_config(
      page_title="Login Expirations",
@@ -7,9 +8,17 @@ st.set_page_config(
      initial_sidebar_state="expanded",
 )
 
+# connect to databases
+with st.spinner("Connecting to database..."):
+     deta = Deta(st.secrets["deta_key"])
+     Heger = deta.Base("Heger")
+
+
 st.title('Login Expirations')
 
 with st.container():
-    st.header('SIPR')
+     st.header('SIPR')
     
-    sipr_date = st.date_input(label='Enter Last Login')
+     sipr_date = st.date_input(label='Enter Last Login')
+
+     Heger.put({"SIPR": sipr_date})
