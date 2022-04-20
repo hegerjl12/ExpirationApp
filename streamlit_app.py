@@ -23,6 +23,6 @@ with st.container():
 
      if sipr_date:
           st.write(sipr_date)
-          Heger.put({"SIPR": str(sipr_date)})
+          Heger.put({"SIPR": str(sipr_date), "key": "1"})
 
      
