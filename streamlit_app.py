@@ -8,6 +8,10 @@ st.set_page_config(
      initial_sidebar_state="expanded",
 )
 
+if 'new_sipr_button' not in st.session_state:
+     st.session_state.new_sipr_button = False
+
+
 # connect to databases
 with st.spinner("Connecting to database..."):
      deta = Deta(st.secrets["deta_key"])
@@ -21,7 +25,7 @@ st.title('Login Expirations')
 with st.container():
      st.header('SIPR')
      
-     if not sipr_date or new_sipr_button:
+     if not sipr_date or st.session_state.new_sipr_button:
           sipr_button = st.button("Enter New Login Date", key=1)
 
           if sipr_button:
@@ -32,7 +36,7 @@ with st.container():
      if sipr_date:
           st.write("Last Login: " + str(sipr_date["SIPR"]))
 
-          new_sipr_button = st.button("Enter a New Login Date", key=3)
+          st.session_state.new_sipr_button = st.button("Enter a New Login Date", key=3)
 
 
 
