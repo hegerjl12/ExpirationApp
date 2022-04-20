@@ -19,7 +19,7 @@ st.title('Login Expirations')
 with st.container():
      st.header('SIPR')
     
-     sipr_date = st.date_input(label='Enter Last Login')
+     sipr_date = st.date_input(label='Enter Last Login', key=1)
 
      if sipr_date:
           st.write(sipr_date)
@@ -29,7 +29,7 @@ with st.container():
 
      st.header('CNET')
     
-     cnet_date = st.date_input(label='Enter Last Login')
+     cnet_date = st.date_input(label='Enter Last Login', key=2)
 
      if cnet_date:
           st.write(cnet_date)
