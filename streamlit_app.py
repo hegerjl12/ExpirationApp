@@ -12,8 +12,8 @@ st.set_page_config(
 with st.spinner("Connecting to database..."):
      deta = Deta(st.secrets["deta_key"])
      Heger = deta.Base("Heger")
-     sipr_date = Heger.get("key": 1)
-     cnet_date = Heger.get("key": 2)
+     sipr_date = Heger.get("1")
+     cnet_date = Heger.get("2")
 
 
 st.title('Login Expirations')
