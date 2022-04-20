@@ -25,4 +25,13 @@ with st.container():
           st.write(sipr_date)
           Heger.put({"SIPR": str(sipr_date), "key": "1"})
 
-     
+
+
+     st.header('CNET')
+    
+     cnet_date = st.date_input(label='Enter Last Login')
+
+     if cnet_date:
+          st.write(cnet_date)
+          Heger.put({"CNET": str(cnet_date), "key": "2"})
+
