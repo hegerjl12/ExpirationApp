@@ -46,5 +46,5 @@ with st.container():
                     Heger.put({"CNET": str(cnet_date), "key": "2"})
 
      if cnet_date:
-          st.write("Last Login: " + str(sipr_date["CNET"]))
+          st.write("Last Login: " + str(cnet_date["CNET"]))
 
