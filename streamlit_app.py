@@ -21,7 +21,7 @@ st.title('Login Expirations')
 with st.container():
      st.header('SIPR')
      
-     if not sipr_date:
+     if not sipr_date or new_sipr_button:
           sipr_button = st.button("Enter New Login Date", key=1)
 
           if sipr_button:
