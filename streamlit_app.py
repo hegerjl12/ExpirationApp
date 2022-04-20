@@ -21,6 +21,6 @@ with st.container():
     
      sipr_date = st.date_input(label='Enter Last Login')
 
-     Heger.put({"SIPR": sipr_date}, key=1)
+     Heger.put({"SIPR": str(sipr_date)}, key=1)
 
      
