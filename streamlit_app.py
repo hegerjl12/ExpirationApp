@@ -29,7 +29,7 @@ with st.container():
 
      st.header('CNET')
     
-     cnet_date = st.date_input(label='Enter Last Login', key=2)
+     cnet_date = st.date_input(label='Enter Last Login', value=None, key=2)
 
      if cnet_date:
           st.write(cnet_date)
