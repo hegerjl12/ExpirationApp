@@ -25,7 +25,7 @@ with st.container():
           sipr_date = st.date_input(label='Enter Last Login', key=1)
 
      if sipr_date:
-          st.write(sipr_date)
+          st.write("Last Login: " + str(sipr_date))
         #  Heger.put({"SIPR": str(sipr_date), "key": "1"})
 
 
@@ -33,7 +33,10 @@ with st.container():
      st.header('CNET')
     
      if not cnet_date:
-          cnet_date = st.date_input(label='Enter Last Login', value=None, key=2)
+          cnet_button = st.button("Enter New Login Date")
+
+          if cnet_button:
+               cnet_date = st.date_input(label='Enter Last Login', value=None, key=2)
 
      if cnet_date:
           st.write(cnet_date)
